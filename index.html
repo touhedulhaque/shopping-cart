@@ -66,8 +66,8 @@
 
                      <div class="col-md-4 status">
                         <h5>$ <span id="subtotalValue">1278</span></h5>
-                        <h5>$ <span id="taxValue">25.56</span></h5>
-                        <h5>$ <span id="finalPrice">1303.56</span></h5>
+                        <h5>$ <span id="taxValue">25</span></h5>
+                        <h5>$ <span id="finalPrice">1303</span></h5>
                      </div>
                   </div>
                </div>
@@ -86,29 +86,29 @@
       const plusQuantityButton = document.getElementById("plusQuantity");
       plusQuantityButton.addEventListener("click", function () {
          const quantityNumber = document.getElementById("quantityNumber").value;
-         const quantityAmount = parseFloat(quantityNumber);
+         const quantityAmount = parseInt(quantityNumber);
          const totalQuantity = quantityAmount + 1;
 
-         
+
 
          const phonePrice = document.getElementById("phonePrice").innerText;
-         const currentPhonePrice = parseFloat(phonePrice);
+         const currentPhonePrice = parseInt(phonePrice);
          const totalPhonePrice = totalQuantity * 1219;
 
-         
+
 
          const subtotalValue = document.getElementById("subtotalValue").innerText;
-         const totalSubTotal = parseFloat(subtotalValue);
-         const subTotalFinal = totalSubTotal+1219;
+         const totalSubTotal = parseInt(subtotalValue);
+         const subTotalFinal = totalSubTotal + 1219;
 
 
          const taxValue = document.getElementById("taxValue").innerText;
-         const totalTaxValue = parseFloat(taxValue);
-         const taxValueFinal = subTotalFinal * 2/100;
+         const totalTaxValue = parseInt(taxValue);
+         const taxValueFinal = Math.round(subTotalFinal * 2 / 100);
 
          const finalPrice = document.getElementById("finalPrice").innerText;
-         const totalFinalValue = parseFloat(finalPrice);
-         const finalPriceAmount = subTotalFinal+taxValueFinal;
+         const totalFinalValue = parseInt(finalPrice);
+         const finalPriceAmount = subTotalFinal + taxValueFinal;
 
 
 
@@ -118,33 +118,33 @@
          document.getElementById("taxValue").innerText = taxValueFinal;
          document.getElementById("finalPrice").innerText = finalPriceAmount;
 
-         
+
       })
 
       // this area is for iphone if click - then 1-1 = 0
       const minusQuantityButton = document.getElementById("minusQuantity");
       minusQuantityButton.addEventListener("click", function () {
          const quantityNumber = document.getElementById("quantityNumber").value;
-         const quantityAmount = parseFloat(quantityNumber);
+         const quantityAmount = parseInt(quantityNumber);
          const totalQuantity = quantityAmount - 1;
 
          const phonePrice = document.getElementById("phonePrice").innerText;
-         const currentPhonePrice = parseFloat(phonePrice);
+         const currentPhonePrice = parseInt(phonePrice);
          const totalPhonePrice = totalQuantity * 1219;
 
          const subtotalValue = document.getElementById("subtotalValue").innerText;
-         const totalSubTotal = parseFloat(subtotalValue);
-         const subTotalFinal = totalSubTotal-1219;
+         const totalSubTotal = parseInt(subtotalValue);
+         const subTotalFinal = totalSubTotal - 1219;
 
          const taxValue = document.getElementById("taxValue").innerText;
-         const totalTaxValue = parseFloat(taxValue);
-         const taxValueFinal = subTotalFinal * 2/100;
+         const totalTaxValue = parseInt(taxValue);
+         const taxValueFinal = Math.round(subTotalFinal * 2 / 100);
 
          const finalPrice = document.getElementById("finalPrice").innerText;
-         const totalFinalValue = parseFloat(finalPrice);
-         const finalPriceAmount = subTotalFinal+taxValueFinal;
+         const totalFinalValue = parseInt(finalPrice);
+         const finalPriceAmount = subTotalFinal + taxValueFinal;
 
-         
+
 
          document.getElementById("quantityNumber").value = totalQuantity;
          document.getElementById("phonePrice").innerText = totalPhonePrice;
@@ -157,24 +157,24 @@
       const plusCaseQuantityButton = document.getElementById("plusCaseQuantity");
       plusCaseQuantityButton.addEventListener("click", function () {
          const quantityCaseNumber = document.getElementById("quantityCaseNumber").value;
-         const quantityCaseAmount = parseFloat(quantityCaseNumber);
+         const quantityCaseAmount = parseInt(quantityCaseNumber);
          const totalCaseQuantity = quantityCaseAmount + 1;
 
          const casePrice = document.getElementById("casePrice").innerText;
-         const currentCasePrice = parseFloat(casePrice);
+         const currentCasePrice = parseInt(casePrice);
          const totalCasePrice = totalCaseQuantity * 59;
 
          const subtotalValue = document.getElementById("subtotalValue").innerText;
-         const totalSubTotal = parseFloat(subtotalValue);
-         const subTotalFinal = totalSubTotal+59;
+         const totalSubTotal = parseInt(subtotalValue);
+         const subTotalFinal = totalSubTotal + 59;
 
          const taxValue = document.getElementById("taxValue").innerText;
-         const totalTaxValue = parseFloat(taxValue);
-         const taxValueFinal = subTotalFinal * 2/100;
+         const totalTaxValue = parseInt(taxValue);
+         const taxValueFinal = Math.round(subTotalFinal * 2 / 100);
 
          const finalPrice = document.getElementById("finalPrice").innerText;
-         const totalFinalValue = parseFloat(finalPrice);
-         const finalPriceAmount = subTotalFinal+taxValueFinal;
+         const totalFinalValue = parseInt(finalPrice);
+         const finalPriceAmount = subTotalFinal + taxValueFinal;
 
 
 
@@ -190,24 +190,24 @@
       const minusCaseQuantityButton = document.getElementById("minusCaseQuantity");
       minusCaseQuantityButton.addEventListener("click", function () {
          const quantityCaseNumber = document.getElementById("quantityCaseNumber").value;
-         const quantityCaseAmount = parseFloat(quantityCaseNumber);
+         const quantityCaseAmount = parseInt(quantityCaseNumber);
          const totalCaseQuantity = quantityCaseAmount - 1;
 
          const casePrice = document.getElementById("casePrice").innerText;
-         const currentCasePrice = parseFloat(casePrice);
+         const currentCasePrice = parseInt(casePrice);
          const totalCasePrice = totalCaseQuantity * 59;
 
          const subtotalValue = document.getElementById("subtotalValue").innerText;
-         const totalSubTotal = parseFloat(subtotalValue);
-         const subTotalFinal = totalSubTotal-59;
+         const totalSubTotal = parseInt(subtotalValue);
+         const subTotalFinal = totalSubTotal - 59;
 
          const taxValue = document.getElementById("taxValue").innerText;
-         const totalTaxValue = parseFloat(taxValue);
-         const taxValueFinal = subTotalFinal * 2/100;
+         const totalTaxValue = parseInt(taxValue);
+         const taxValueFinal = Math.round(subTotalFinal * 2 / 100);
 
          const finalPrice = document.getElementById("finalPrice").innerText;
-         const totalFinalValue = parseFloat(finalPrice);
-         const finalPriceAmount = subTotalFinal+taxValueFinal;
+         const totalFinalValue = parseInt(finalPrice);
+         const finalPriceAmount = subTotalFinal + taxValueFinal;
 
 
 
